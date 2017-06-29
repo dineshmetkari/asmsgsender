@@ -17,7 +17,7 @@ public class AsmsgsenderApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		long msgid = 0;
-		for(int index=0; index < 2; index++) {
+		for(int index=0; index < 1000; index++) {
 			for(int circleIndex=1; circleIndex <= 5; circleIndex++) {
 				AsMessage tmpMsg = new AsMessage(++msgid, "circle" + circleIndex, circleIndex, circleIndex, "Message " + circleIndex, 1);
 				producer.send(tmpMsg);
